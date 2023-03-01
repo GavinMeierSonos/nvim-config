@@ -5,8 +5,18 @@ lsp.preset("recommended")
 lsp.ensure_installed({
 	"tsserver",
 	"eslint",
-	"sumneko_lua",
+	--"sumneko_lua",
 	"rust_analyzer"
+})
+-- Fix Undefined global 'vim'
+lsp.configure('sumneko_lua', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
 })
 
 local cmp = require("cmp")
@@ -34,6 +44,7 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
 	vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
 	vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+  -- Allows for things like eslint disable and all that to pop up
 	vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
 	vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
 	vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
@@ -46,4 +57,3 @@ vim.diagnostic.config({
 	virtual_text = true
 })
 
-vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]

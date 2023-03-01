@@ -16,20 +16,34 @@ return require('packer').startup(function(use)
   	requires = { {'nvim-lua/plenary.nvim'} }
   }
 -- Theme
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    config = function()
-    require("rose-pine").setup({
-	    disable_background = false,
-	    dark_variant = 'main',
-    })
+-- use({ 'rose-pine/neovim', as = 'rose-pine', config = function() require("rose-pine").setup({ disable_background = true, dark_variant = 'main', }) 
+--  vim.cmd('colorscheme rose-pine') 
+--	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+--	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+-- end })
 
-    vim.cmd('colorscheme rose-pine')
-    end
-    })
-
---  use { "catppuccin/nvim", as = "catppuccin",}  -- Theme
+use ({ "catppuccin/nvim", as = "catppuccin", 
+config = function ()
+  require("catppuccin").setup({
+     flavour = "mocha",
+      background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+     term_colors = true,
+     transparent_background = false,
+     integrations = {
+        nvimtree = true,
+        harpoon = true,
+        telescope = true,
+        treesitter = true
+        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+    },
+  })
+  vim.cmd('colorscheme catppuccin')
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end })
 
 -- Tree Sitter
    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -65,4 +79,16 @@ return require('packer').startup(function(use)
     {'rafamadriz/friendly-snippets'}, -- Optional
   }
 }
+  -- Vim game
+  use('theprimeagen/vim-be-good')
+  -- Floating terminal
+  use "numToStr/FTerm.nvim"
+
+  use("sbdchd/neoformat")
+
+  -- file explorer
+  -- commented out for now till I can get the leader pv working and decide if I like the tree on the side
+--  use {  'nvim-tree/nvim-tree.lua',requires = {'nvim-tree/nvim-web-devicons', },}
+  use('f-person/git-blame.nvim')
+
 end)

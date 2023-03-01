@@ -1,3 +1,4 @@
+-- Currently not loading this in in init.lua
 
 -- disable netrw at the very start of your init.lua (strongly advised)
 --vim.g.loaded_netrw = 1

@@ -84,12 +84,6 @@ _G.packer_plugins = {
     path = "/Users/gmeier/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  catppuccin = {
-    config = { "\27LJ\2\n―3\0\0\5\0\17\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\0016\0\b\0009\0\t\0'\2\n\0B\0\2\0016\0\b\0009\0\v\0009\0\f\0)\2\0\0'\3\r\0005\4\14\0B\0\4\0016\0\b\0009\0\v\0009\0\f\0)\2\0\0'\3\15\0005\4\16\0B\0\4\1K\0\1\0\1\0\1\abg\tnone\16NormalFloat\1\0\1\abg\tnone\vNormal\16nvim_set_hl\bapi\27colorscheme catppuccin\bcmd\bvim\17integrations\1\0\4\15treesitter\2\14telescope\2\fharpoon\2\rnvimtree\2\15background\1\0\2\tdark\nmocha\nlight\nlatte\1\0\3\fflavour\nmocha\27transparent_background\1\16term_colors\2\nsetup\15catppuccin\frequire\0" },
-    loaded = true,
-    path = "/Users/gmeier/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/gmeier/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -180,6 +174,12 @@ _G.packer_plugins = {
     path = "/Users/gmeier/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rose-pine"] = {
+    config = { "\27LJ\2\nソ2\0\0\5\0\r\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\0016\0\4\0009\0\a\0009\0\b\0)\2\0\0'\3\t\0005\4\n\0B\0\4\0016\0\4\0009\0\a\0009\0\b\0)\2\0\0'\3\v\0005\4\f\0B\0\4\1K\0\1\0\1\0\1\abg\tnone\16NormalFloat\1\0\1\abg\tnone\vNormal\16nvim_set_hl\bapi\26colorscheme rose-pine\bcmd\bvim\1\0\2\23disable_background\2\17dark_variant\tmain\nsetup\14rose-pine\frequire\0" },
+    loaded = true,
+    path = "/Users/gmeier/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/gmeier/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -203,10 +203,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: catppuccin
-time([[Config for catppuccin]], true)
-try_loadstring("\27LJ\2\n―3\0\0\5\0\17\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\0016\0\b\0009\0\t\0'\2\n\0B\0\2\0016\0\b\0009\0\v\0009\0\f\0)\2\0\0'\3\r\0005\4\14\0B\0\4\0016\0\b\0009\0\v\0009\0\f\0)\2\0\0'\3\15\0005\4\16\0B\0\4\1K\0\1\0\1\0\1\abg\tnone\16NormalFloat\1\0\1\abg\tnone\vNormal\16nvim_set_hl\bapi\27colorscheme catppuccin\bcmd\bvim\17integrations\1\0\4\15treesitter\2\14telescope\2\fharpoon\2\rnvimtree\2\15background\1\0\2\tdark\nmocha\nlight\nlatte\1\0\3\fflavour\nmocha\27transparent_background\1\16term_colors\2\nsetup\15catppuccin\frequire\0", "config", "catppuccin")
-time([[Config for catppuccin]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+try_loadstring("\27LJ\2\nソ2\0\0\5\0\r\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\0016\0\4\0009\0\a\0009\0\b\0)\2\0\0'\3\t\0005\4\n\0B\0\4\0016\0\4\0009\0\a\0009\0\b\0)\2\0\0'\3\v\0005\4\f\0B\0\4\1K\0\1\0\1\0\1\abg\tnone\16NormalFloat\1\0\1\abg\tnone\vNormal\16nvim_set_hl\bapi\26colorscheme rose-pine\bcmd\bvim\1\0\2\23disable_background\2\17dark_variant\tmain\nsetup\14rose-pine\frequire\0", "config", "rose-pine")
+time([[Config for rose-pine]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -34,9 +34,9 @@ return require('packer').startup(function(use)
   --  use {  'nvim-tree/nvim-tree.lua',requires = {'nvim-tree/nvim-web-devicons', },}
   -- ./lsp.lua
   use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v1.x',
-    requires = {
+  'VonHeikemen/lsp-zero.nvim',
+  branch = 'v1.x',
+  requires = {
       { 'neovim/nvim-lspconfig' },
       { 'williamboman/mason.nvim' },
       { 'williamboman/mason-lspconfig.nvim' },
@@ -53,36 +53,36 @@ return require('packer').startup(function(use)
 
   -- 🎨 THEMES 🎭
 
-  -- use({ 'rose-pine/neovim', as = 'rose-pine', config = function() require("rose-pine").setup({ disable_background = true, dark_variant = 'main', })
-  --  vim.cmd('colorscheme rose-pine')
-  --	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-  --	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-  -- end })
+use({ 'rose-pine/neovim', as = 'rose-pine', config = function() require("rose-pine").setup({ disable_background = true, dark_variant = 'main', })
+  vim.cmd('colorscheme rose-pine')
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+ end })
 
   -- I tend to like this theme more 🤷‍♂️
-  use({
-    "catppuccin/nvim",
-    as = "catppuccin",
-    config = function()
-      require("catppuccin").setup({
-        flavour = "mocha",
-        background = { -- :h background
-          light = "latte",
-          dark = "mocha",
-        },
-        term_colors = true,
-        transparent_background = false,
-        integrations = {
-          nvimtree = true,
-          harpoon = true,
-          telescope = true,
-          treesitter = true
+-- use({
+  --  "catppuccin/nvim",
+   -- as = "catppuccin",
+   -- config = function()
+    --  require("catppuccin").setup({
+     --   flavour = "mocha",
+      --  background = { -- :h background
+       --   light = "latte",
+        --  dark = "mocha",
+       -- },
+       -- term_colors = true,
+       -- transparent_background = false,
+       -- integrations = {
+        --  nvimtree = true,
+         -- harpoon = true,
+          --telescope = true,
+          --treesitter = true
           -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-        },
-      })
-      vim.cmd('colorscheme catppuccin')
-      vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    end
-  })
+        --},
+      --})
+      --vim.cmd('colorscheme catppuccin')
+     -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+      --vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    --end
+  --})
 end)
